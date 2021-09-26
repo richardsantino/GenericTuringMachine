@@ -31,10 +31,13 @@ for i in range(n_transicoes+4, n_transicoes+4+n_teste):
 
 ## -- execução da maquina de turing -- #
 if len(simbolos) <= 30 and int(n_estados) <= 50: # verifica se a maquina tem configurações que ultrapassam o limite.
+    n=0
     for fita in palavras:
+        if n == n_teste: break
         if len(fita) <= 100: # verifica se a fita esta no limite de caracteres.
             turing_machine.run(fita, n_estados, transicoes)
         else: 
             print(fita, "não executada, pois ultrapassa o limite de 100 caracteres")
+        n+=1
 else:
     print("configurações de entrada invalidas, revise e entrada de texto e tente novamente.")
