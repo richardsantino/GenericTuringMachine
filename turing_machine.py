@@ -12,11 +12,9 @@ class turing_machine:
         fita.append('-')
 
         while(True):
-            #print(fita)
-            #print("\nestado atual:", estado_atual, "\nposição cabeçote: ", i_cabecote)
-            #print("cabeçote lendo:", fita[i_cabecote])
-            #adiciona espaço na lista, pq talvez o cobeçote precise de espaço
-            if fita[i_cabecote] == '-': fita.append('-')
+            #se o cabeçote chegar na ultima posição da fica, adiciona espaço na lista, pq talvez o cobeçote precise de espaço
+            #if fita[i_cabecote] == '-': fita.append('-')
+            if i_cabecote == len(fita)-1: fita.append('-')
 
             #obtem a regra de transição daquele estado e posição do cabeçote
             transicao = []

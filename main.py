@@ -29,16 +29,12 @@ for i in range(n_transicoes+4, n_transicoes+4+n_teste):
     palavra = entrada_linhas[i]
     palavras.append(palavra)
 
-#print(simbolos, n_estados, n_transicoes)
-#print(transicoes)
-#print(n_teste, palavras)
-
-for entrada in palavras:
-    turing_machine.run(entrada, n_estados, transicoes)
-
-# -- formato do txt --
-# linha 1 -> simbolos de entrada com o simbolos da fita.                max de 30 simbolos
-# linha 2 -> numero de estados, o ultimo estado é sempre o qaceita.     max de 50 estados
-# linha 3 -> as transições
-# linha depois das n transições -> um inteiro especificando o numero de palavras que deverão ser testadas pela maquina
-# seguida das n palavras em cada linha.                                 max de 100 simbolos por fita
+## -- execução da maquina de turing -- #
+if len(simbolos) <= 30 and int(n_estados) <= 50: # verifica se a maquina tem configurações que ultrapassam o limite.
+    for fita in palavras:
+        if len(fita) <= 100: # verifica se a fita esta no limite de caracteres.
+            turing_machine.run(fita, n_estados, transicoes)
+        else: 
+            print(fita, "não executada, pois ultrapassa o limite de 100 caracteres")
+else:
+    print("configurações de entrada invalidas, revise e entrada de texto e tente novamente.")
