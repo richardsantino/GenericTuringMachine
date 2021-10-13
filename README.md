@@ -5,7 +5,7 @@ python main.py
 As configurações da Maquina de Turing estão contidas no arquivo input.txt, sendo possivel alterar-las seguindo as regras:
 
 1. Na primeira linha, os sımbolos do alfabeto de entrada (Σ), com letras sempre em minusculo e sem espa¸cos
-em branco entre os sımbolos, concatenados com sımbolos do alfabeto fita (Γ), sem o s´ımbolo em branco t,
+em branco entre os sımbolos, concatenados com sımbolos do alfabeto fita (Γ), sem o simbolo em branco t,
 considere que teremos no maximo 30 sımbolos na primeira linha.
 
 2. Na segunda linha, o numero de estados, para facilitar a implementação o estado de aceitação sempre sera
